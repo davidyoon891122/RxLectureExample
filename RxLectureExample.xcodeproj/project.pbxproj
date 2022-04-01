@@ -56,6 +56,7 @@
 		ADBBAD9327F5D92A00C3844F = {
 			isa = PBXGroup;
 			children = (
+				ADBBADC727F5ED4800C3844F /* .README.MD */,
 				ADBBAD9E27F5D92A00C3844F /* RxLectureExample */,
 				ADBBAD9D27F5D92A00C3844F /* Products */,
 			);
@@ -82,7 +83,6 @@
 				ADBBADA827F5D92C00C3844F /* Assets.xcassets */,
 				ADBBADAA27F5D92C00C3844F /* LaunchScreen.storyboard */,
 				ADBBADAD27F5D92C00C3844F /* Info.plist */,
-				ADBBADC727F5ED4800C3844F /* .README.MD */,
 			);
 			path = RxLectureExample;
 			sourceTree = "<group>";
