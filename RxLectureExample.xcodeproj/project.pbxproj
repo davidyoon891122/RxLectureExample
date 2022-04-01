@@ -20,7 +20,7 @@
 		ADBBADC027F5DB8F00C3844F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBBADBF27F5DB8F00C3844F /* LoginViewController.swift */; };
 		ADBBADC327F5EA3800C3844F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = ADBBADC227F5EA3800C3844F /* Lottie */; };
 		ADBBADC627F5EA9200C3844F /* stocks.json in Resources */ = {isa = PBXBuildFile; fileRef = ADBBADC527F5EA9200C3844F /* stocks.json */; };
-		ADBBADC827F5ED4800C3844F /* .README.MD in Resources */ = {isa = PBXBuildFile; fileRef = ADBBADC727F5ED4800C3844F /* .README.MD */; };
+		ADBBADC827F5ED4800C3844F /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = ADBBADC727F5ED4800C3844F /* README.MD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 		ADBBADAD27F5D92C00C3844F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADBBADBF27F5DB8F00C3844F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ADBBADC527F5EA9200C3844F /* stocks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stocks.json; sourceTree = "<group>"; };
-		ADBBADC727F5ED4800C3844F /* .README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .README.MD; sourceTree = "<group>"; };
+		ADBBADC727F5ED4800C3844F /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 		ADBBAD9327F5D92A00C3844F = {
 			isa = PBXGroup;
 			children = (
-				ADBBADC727F5ED4800C3844F /* .README.MD */,
+				ADBBADC727F5ED4800C3844F /* README.MD */,
 				ADBBAD9E27F5D92A00C3844F /* RxLectureExample */,
 				ADBBAD9D27F5D92A00C3844F /* Products */,
 			);
@@ -181,7 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADBBADAC27F5D92C00C3844F /* LaunchScreen.storyboard in Resources */,
-				ADBBADC827F5ED4800C3844F /* .README.MD in Resources */,
+				ADBBADC827F5ED4800C3844F /* README.MD in Resources */,
 				ADBBADA927F5D92C00C3844F /* Assets.xcassets in Resources */,
 				ADBBADC627F5EA9200C3844F /* stocks.json in Resources */,
 				ADBBADA727F5D92A00C3844F /* Main.storyboard in Resources */,
