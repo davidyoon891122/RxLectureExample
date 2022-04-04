@@ -201,6 +201,12 @@ private extension LoginViewController {
             }
         })
         .disposed(by: disposeBag)
+        
+        loginButton.rx.tap.throttle(.microseconds(300), scheduler: MainScheduler.instance)
+            .subscribe(onNext: {
+                print("Tapped")
+            })
+            .disposed(by: disposeBag)
     }
     
     func isValidID(id: String) -> Bool {
