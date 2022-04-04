@@ -34,7 +34,6 @@ final class LoginViewController: UIViewController {
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.gray.cgColor
         textField.layer.cornerRadius = 12
-        textField.delegate = self
         return textField
     }()
     
@@ -46,7 +45,6 @@ final class LoginViewController: UIViewController {
         textField.layer.borderColor = UIColor.gray.cgColor
         textField.layer.cornerRadius = 12
         textField.isSecureTextEntry = true
-        textField.delegate = self
         return textField
     }()
     
@@ -140,70 +138,69 @@ private extension LoginViewController {
     }
     
     func bindUI() {
-//        idTextField.rx.text
-//            .orEmpty
-//            .map(isValidID)
-//            .subscribe(onNext: { [weak self] result in
-//                self?.idValidView.isHidden = result
-//            })
-//            .disposed(by: disposeBag)
-//
-//        pwTextField.rx.text
-//            .orEmpty
-//            .map(isValidPW)
-//            .subscribe(onNext: { [weak self] result in
-//                self?.pwValidView.isHidden = result
-//            })
-//            .disposed(by: disposeBag)
+        idTextField.rx.text
+            .orEmpty
+            .map(isValidID)
+            .subscribe(onNext: { [weak self] result in
+                self?.idValidView.isHidden = result
+            })
+            .disposed(by: disposeBag)
+
+        pwTextField.rx.text
+            .orEmpty
+            .map(isValidPW)
+            .subscribe(onNext: { [weak self] result in
+                self?.pwValidView.isHidden = result
+            })
+            .disposed(by: disposeBag)
         
-//        idTextField.rx.text
-//            .orEmpty
-//            .bind(to: idInputTextSubject)
-//            .disposed(by: disposeBag)
-//
-//        pwTextField.rx.text
-//            .orEmpty
-//            .bind(to: pwInputTextSubject)
-//            .disposed(by: disposeBag)
-//
-//
-//        idInputTextSubject
-//            .map(isValidID)
-//            .bind(to: idValidSubject)
-//            .disposed(by: disposeBag)
-//
-//        pwInputTextSubject
-//            .map(isValidPW)
-//            .bind(to: pwValidSubject)
-//            .disposed(by: disposeBag)
-//
-//
-//        idValidSubject
-//            .subscribe(onNext: { result in
-//                self.idValidView.isHidden = result
-//            })
-//            .disposed(by: disposeBag)
-//
-//        pwValidSubject
-//            .subscribe(onNext: { result in
-//                self.pwValidView.isHidden = result
-//            })
-//            .disposed(by: disposeBag)
-//
-//        Observable.combineLatest(idValidSubject,
-//                                 pwValidSubject,
-//                                 resultSelector: { $0 && $1 }
-//        )
-//        .subscribe(onNext: { result in
-//            self.loginButton.isEnabled = result
-//            if result {
-//                self.loginButton.setTitle("로그인", for: .normal)
-//            } else {
-//
-//            }
-//        })
-//        .disposed(by: disposeBag)
-//
+        idTextField.rx.text
+            .orEmpty
+            .bind(to: idInputTextSubject)
+            .disposed(by: disposeBag)
+
+        pwTextField.rx.text
+            .orEmpty
+            .bind(to: pwInputTextSubject)
+            .disposed(by: disposeBag)
+
+
+        idInputTextSubject
+            .map(isValidID)
+            .bind(to: idValidSubject)
+            .disposed(by: disposeBag)
+
+        pwInputTextSubject
+            .map(isValidPW)
+            .bind(to: pwValidSubject)
+            .disposed(by: disposeBag)
+
+
+        idValidSubject
+            .subscribe(onNext: { result in
+                self.idValidView.isHidden = result
+            })
+            .disposed(by: disposeBag)
+
+        pwValidSubject
+            .subscribe(onNext: { result in
+                self.pwValidView.isHidden = result
+            })
+            .disposed(by: disposeBag)
+
+        Observable.combineLatest(idValidSubject,
+                                 pwValidSubject,
+                                 resultSelector: { $0 && $1 }
+        )
+        .subscribe(onNext: { result in
+            self.loginButton.isEnabled = result
+            if result {
+                self.loginButton.setTitle("로그인", for: .normal)
+            } else {
+
+            }
+        })
+        .disposed(by: disposeBag)
     }
     
     func isValidID(id: String) -> Bool {
@@ -229,13 +226,5 @@ class PaddingTextField: UITextField {
     
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
-    }
-}
-
-
-extension LoginViewController: UITextFieldDelegate {
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        guard let text = textField.text else { return }
-        print(text)
     }
 }
