@@ -203,34 +203,22 @@ private extension LoginViewController {
         .disposed(by: disposeBag)
         
         loginButton.rx.tap.throttle(.microseconds(300), scheduler: MainScheduler.instance)
-            .subscribe(onNext: {
-                print("Tapped")
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else { return }
+                let tabVC = TabBarController()
+                tabVC.modalPresentationStyle = .fullScreen
+                self.present(tabVC, animated: false, completion: nil)
             })
             .disposed(by: disposeBag)
     }
-    
+}
+
+private extension LoginViewController {
     func isValidID(id: String) -> Bool {
         return id.contains("@") && id.contains(".")
     }
     
     func isValidPW(pw: String) -> Bool {
         return pw.count > 6
-    }
-}
-
-
-class PaddingTextField: UITextField {
-    let padding = UIEdgeInsets(top: 0, left: 8.0, bottom: 0, right: 0)
-    
-    override func textRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.inset(by: padding)
-    }
-    
-    override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.inset(by: padding)
-    }
-    
-    override func editingRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.inset(by: padding)
     }
 }

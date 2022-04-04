@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AD91C2C027FA8F9A00199897 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91C2BF27FA8F9A00199897 /* LoginViewModel.swift */; };
 		AD91C2C227FA91AE00199897 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91C2C127FA91AE00199897 /* TabBarItem.swift */; };
+		AD91C2C427FA924A00199897 /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91C2C327FA924A00199897 /* PaddingTextField.swift */; };
+		AD91C2C727FA93A000199897 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91C2C627FA93A000199897 /* TabBarController.swift */; };
 		ADBBADA027F5D92A00C3844F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBBAD9F27F5D92A00C3844F /* AppDelegate.swift */; };
 		ADBBADA227F5D92A00C3844F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBBADA127F5D92A00C3844F /* SceneDelegate.swift */; };
 		ADBBADA427F5D92A00C3844F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBBADA327F5D92A00C3844F /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		AD91C2BF27FA8F9A00199897 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AD91C2C127FA91AE00199897 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		AD91C2C327FA924A00199897 /* PaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
+		AD91C2C627FA93A000199897 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		ADBBAD9C27F5D92A00C3844F /* RxLectureExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxLectureExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBBAD9F27F5D92A00C3844F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADBBADA127F5D92A00C3844F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD91C2C527FA939000199897 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				ADBBADBF27F5DB8F00C3844F /* LoginViewController.swift */,
+				AD91C2BF27FA8F9A00199897 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		ADBBAD9327F5D92A00C3844F = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +107,10 @@
 		ADBBADBA27F5D9DD00C3844F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				ADBBADBF27F5DB8F00C3844F /* LoginViewController.swift */,
-				AD91C2BF27FA8F9A00199897 /* LoginViewModel.swift */,
+				AD91C2C527FA939000199897 /* Login */,
 				AD91C2C127FA91AE00199897 /* TabBarItem.swift */,
+				AD91C2C327FA924A00199897 /* PaddingTextField.swift */,
+				AD91C2C627FA93A000199897 /* TabBarController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -202,7 +216,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD91C2C227FA91AE00199897 /* TabBarItem.swift in Sources */,
+				AD91C2C727FA93A000199897 /* TabBarController.swift in Sources */,
 				ADBBADC027F5DB8F00C3844F /* LoginViewController.swift in Sources */,
+				AD91C2C427FA924A00199897 /* PaddingTextField.swift in Sources */,
 				ADBBADA427F5D92A00C3844F /* ViewController.swift in Sources */,
 				ADBBADA027F5D92A00C3844F /* AppDelegate.swift in Sources */,
 				AD91C2C027FA8F9A00199897 /* LoginViewModel.swift in Sources */,
